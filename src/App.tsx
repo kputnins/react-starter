@@ -5,7 +5,7 @@ import image from "./assets/magic.gif";
 const App: FunctionComponent = () => {
   return (
     <div>
-      <h1>test</h1>
+      <h1>Welcome to React</h1>
       <img src={image} alt="React logo" />
     </div>
   );
