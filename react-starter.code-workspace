@@ -5,8 +5,19 @@
     }
   ],
   "settings": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
     "editor.formatOnSave": true,
     "cSpell.words": ["Statoscope", "nosources", "pmmmwh", "teamsupercell"],
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "dsznajder.es7-react-js-snippets",
+      "streetsidesoftware.code-spell-checker"
+    ]
   }
 }
