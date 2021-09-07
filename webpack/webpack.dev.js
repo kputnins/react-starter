@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'eval-nosources-cheap-module-source-map',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.name': JSON.stringify('Prody McProdFace'),
+      'process.env.name': JSON.stringify('Devy McDevFace'),
     }),
     new ReactRefreshWebpackPlugin(),
     new webpack.WatchIgnorePlugin({ paths: [/scss\.d\.ts$/, /\.test\.tsx?$/] }),

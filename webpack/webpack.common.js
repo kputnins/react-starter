@@ -19,8 +19,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.s?css$/i,
+        use: [
+          'style-loader',
+          '@teamsupercell/typings-for-css-modules-loader',
+          'css-loader',
+          'resolve-url-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,

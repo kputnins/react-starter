@@ -8,7 +8,9 @@ const App: FunctionComponent = () => {
   return (
     <div>
       <h1>Welcome to React - {process.env.name}</h1>
-      <img src={image as string} alt="React logo" />
+      <div>
+        <img src={image as string} alt="React logo" />
+      </div>
       <Counter />
     </div>
   );

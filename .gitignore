@@ -3,3 +3,6 @@ node_modules
 
 # build
 build
+
+# Auto-generated scss typing files
+*.module.scss.d.ts

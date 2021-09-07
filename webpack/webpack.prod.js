@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.name': JSON.stringify('Devy McDevFace'),
+      'process.env.name': JSON.stringify('Prody McProdFace'),
     }),
     new webpack.ProgressPlugin((percentage, message, ...args) =>
       console.info(`${Math.round(percentage * 100)}%`, message, ...args)
