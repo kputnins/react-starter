@@ -1,17 +1,19 @@
-const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+import { Configuration, DefinePlugin, ProgressPlugin } from 'webpack';
 
-module.exports = {
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+
+const prodConfig: Configuration = {
   mode: 'production',
   devtool: 'source-map',
   plugins: [
-    new webpack.DefinePlugin({
+    new DefinePlugin({
       'process.env.name': JSON.stringify('Prody McProdFace'),
     }),
-    new webpack.ProgressPlugin((percentage, message, ...args) =>
-      console.info(`${Math.round(percentage * 100)}%`, message, ...args)
+    new ProgressPlugin(
+      (percentage: number, message: string, ...args: string[]) =>
+        console.info(`${Math.round(percentage * 100)}%`, message, ...args)
     ),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -32,3 +34,5 @@ module.exports = {
     },
   },
 };
+
+export default prodConfig;

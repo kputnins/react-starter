@@ -1,8 +1,10 @@
+import { Configuration } from 'webpack';
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-module.exports = {
+const commonConfig: Configuration = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -57,3 +59,5 @@ module.exports = {
     }),
   ],
 };
+
+export default commonConfig;
