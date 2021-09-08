@@ -22,7 +22,7 @@ const prodConfig: Configuration = {
     new CssMinimizerPlugin(),
   ],
   optimization: {
-    realContentHash: false,
+    realContentHash: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
