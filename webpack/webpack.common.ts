@@ -1,8 +1,7 @@
 import { Configuration } from 'webpack';
-
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 const commonConfig: Configuration = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
