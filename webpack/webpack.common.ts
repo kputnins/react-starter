@@ -47,6 +47,7 @@ const commonConfig: Configuration = {
   output: {
     path: path.resolve(__dirname, '..', './build'),
     filename: '[name].[contenthash].js',
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({

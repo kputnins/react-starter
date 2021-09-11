@@ -5,6 +5,7 @@ import { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 const devConfig: Configuration & { devServer: DevServerConfiguration } = {
   mode: 'development',
   devServer: {
+    historyApiFallback: true,
     hot: true,
     port: 3000,
   },
