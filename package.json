@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A react, typescript, sass, jest, webpack starter project",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,9 @@
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "test": "jest",
     "test-watch": "jest --watch",
-    "test-coverage": "jest --coverage"
+    "test-coverage": "jest --coverage",
+    "update": "yarn upgrade-interactive",
+    "audit-npm": "yarn npm audit"
   },
   "author": "kaspars putniņš",
   "license": "MIT",
@@ -100,5 +102,6 @@
   },
   "jest-junit": {
     "outputDirectory": "./coverage"
-  }
+  },
+  "packageManager": "yarn@3.1.1"
 }

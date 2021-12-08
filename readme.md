@@ -25,13 +25,13 @@ react-starter.code-workspace
 ### 4. Install `npm` dependencies
 
 ```sh
-npm i
+yarn
 ```
 
 ### 5. Run dev server on [`http://localhost:3000/`](http://localhost:3000/)
 
 ```sh
-npm start
+yarn start
 ```
 
 ## Building

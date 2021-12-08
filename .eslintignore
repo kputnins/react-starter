@@ -1,11 +1,15 @@
 # dependencies
 node_modules
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # build
 build
-
-# webpack
-webpack
 
 # testing
 coverage
