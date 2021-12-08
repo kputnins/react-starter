@@ -1,20 +1,21 @@
 {
   "name": "react-starter",
-  "version": "0.6.3",
+  "version": "0.6.5",
   "description": "A react, typescript, sass, jest, webpack starter project",
   "main": "index.js",
   "scripts": {
     "start": "cross-env env=dev webpack serve --config webpack/webpack.config.ts",
     "build": "cross-env env=prod webpack --config webpack/webpack.config.ts",
     "analyze": "cross-env env=prod analyze=true webpack --config webpack/webpack.config.ts",
-    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
-    "lint-types": "tsc --noEmit",
-    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage",
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint-types": "tsc --noEmit",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "update": "yarn upgrade-interactive",
-    "audit-npm": "yarn npm audit"
+    "audit-npm": "yarn npm audit",
+    "prepare": "husky install"
   },
   "author": "kaspars putniņš",
   "license": "MIT",
@@ -66,11 +67,11 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-testing-library": "^5.0.1",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.3",
     "jest-junit": "^13.0.0",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.1.2",
     "mini-css-extract-plugin": "^2.4.5",
     "prettier": "^2.5.1",
     "react-refresh": "^0.11.0",
@@ -87,9 +88,6 @@
     "webpack-merge": "^5.8.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint --fix"
-    ],
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
