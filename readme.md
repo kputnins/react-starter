@@ -4,7 +4,7 @@
 
 ## Features
 
-- supports Typescript, ECMAScript 6+, React, jest, scss, css modules
+- supports Typescript, ECMAScript 6+, React, Redux, jest, scss, css modules
 
 ## Development
 

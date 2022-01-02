@@ -11,7 +11,13 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2,
-    "cSpell.words": ["Statoscope", "nosources", "pmmmwh", "teamsupercell"]
+    "cSpell.words": [
+      "nosources",
+      "pmmmwh",
+      "Statoscope",
+      "teamsupercell",
+      "testid"
+    ]
   },
   "extensions": {
     "recommendations": [
@@ -19,6 +25,7 @@
       "dbaeumer.vscode-eslint",
       "dsznajder.es7-react-js-snippets",
       "streetsidesoftware.code-spell-checker",
+      "eamodio.gitlens",
       "andys8.jest-snippets"
     ]
   },
