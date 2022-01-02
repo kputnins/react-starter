@@ -1,0 +1,108 @@
+{
+  "folders": [
+    {
+      "path": "../"
+    }
+  ],
+  "settings": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "cSpell.words": [
+      "nosources",
+      "pmmmwh",
+      "Statoscope",
+      "teamsupercell",
+      "testid"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "dsznajder.es7-react-js-snippets",
+      "streetsidesoftware.code-spell-checker",
+      "eamodio.gitlens",
+      "andys8.jest-snippets"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "React app",
+        "type": "pwa-chrome",
+        "request": "launch",
+        "preLaunchTask": "Start React app",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}"
+      },
+      {
+        "name": "Chrome debug instance",
+        "type": "pwa-chrome",
+        "request": "launch",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start React app",
+        "type": "shell",
+        "command": "yarn start",
+        "isBackground": true,
+        "problemMatcher": {
+          "owner": "custom",
+          "pattern": {
+            "regexp": "^$"
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "yarn",
+            "endsPattern": "http://localhost:3000/"
+          }
+        }
+      },
+      {
+        "label": "Install npm packages",
+        "type": "shell",
+        "command": "yarn",
+        "isBackground": false,
+        "problemMatcher": {
+          "owner": "custom",
+          "pattern": {
+            "regexp": "^$"
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "Resolution",
+            "endsPattern": "Done"
+          }
+        }
+      },
+      {
+        "label": "Build React app",
+        "type": "shell",
+        "command": "yarn build",
+        "isBackground": false,
+        "problemMatcher": {
+          "owner": "custom",
+          "pattern": {
+            "regexp": "^$"
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "0%",
+            "endsPattern": "Done"
+          }
+        }
+      }
+    ]
+  }
+}
